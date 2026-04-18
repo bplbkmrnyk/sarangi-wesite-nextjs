@@ -211,23 +211,23 @@ export default function ExpandableGallery({ items }: ExpandableGalleryProps) {
                     </div>
 
                     <div className="relative z-10 flex h-full flex-col">
-                      <div className="inline-flex w-fit items-center rounded-full border border-[#d7e7de] bg-white/72 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2f6e5b] shadow-[0_10px_20px_rgba(20,40,34,0.04)]">
+                      <div className="inline-flex w-fit items-center rounded-full border border-[#d7e7de] bg-white/72 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary-hover shadow-[0_10px_20px_rgba(20,40,34,0.04)]">
                         {activeItem.category}
                       </div>
 
-                      <h3 className="mt-5 text-[2rem] font-bold leading-[0.95] tracking-[-0.04em] text-[#24443a] sm:text-[2.4rem]">
+                      <h3 className="mt-5 text-[2rem] font-bold leading-[0.95] tracking-[-0.04em] text-secondary sm:text-[2.4rem]">
                         {activeItem.title}
                       </h3>
 
-                      <p className="mt-5 text-[1rem] leading-7 text-[#49635a] sm:text-[1.05rem] sm:leading-8">
+                      <p className="mt-5 text-[1rem] leading-7 text-secondary-light sm:text-[1.05rem] sm:leading-8">
                         {activeItem.description}
                       </p>
 
                       <div className="mt-8 rounded-3xl border border-[#d9e8e0] bg-white/76 p-5 shadow-[0_14px_30px_rgba(20,40,34,0.04)]">
-                        <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                        <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary-hover">
                           Sarangi Dentistry
                         </div>
-                        <div className="mt-2 text-[1.05rem] font-semibold text-[#24443a]">
+                        <div className="mt-2 text-[1.05rem] font-semibold text-secondary">
                           Premium clinic environment with patient-first care
                         </div>
                       </div>
@@ -245,7 +245,7 @@ export default function ExpandableGallery({ items }: ExpandableGalleryProps) {
                                     : prev - 1,
                               )
                             }
-                            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#cfe0d7] bg-white text-[#24443a] shadow-[0_10px_24px_rgba(20,40,34,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#b7d7c7] hover:text-[#03966a]"
+                            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#cfe0d7] bg-white text-secondary shadow-[0_10px_24px_rgba(20,40,34,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#b7d7c7] hover:text-primary"
                             aria-label="Previous image"
                           >
                             <svg
@@ -263,7 +263,7 @@ export default function ExpandableGallery({ items }: ExpandableGalleryProps) {
                             </svg>
                           </button>
 
-                          <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                          <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-secondary">
                             {String(activeIndex + 1).padStart(2, "0")} /{" "}
                             {String(items.length).padStart(2, "0")}
                           </div>

@@ -45,16 +45,16 @@ export default function WhyChooseUsSection() {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <SectionReveal className="mb-12 text-center">
-          <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-[#d6e8de] bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#2f6b58]">
-            <span className="h-2 w-2 rounded-full bg-[#03966a]" />
+          <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-[#d6e8de] bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-secondary">
+            <span className="h-2 w-2 rounded-full bg-primary" />
             Why Choose Us
           </div>
 
-          <h2 className="mx-auto mt-5 max-w-4xl font-['Cormorant_Garamond','Georgia',serif] text-[clamp(2.8rem,5vw,4.8rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[#24443a]">
+          <h2 className="mx-auto mt-5 max-w-4xl font-['Cormorant_Garamond','Georgia',serif] text-[clamp(2.8rem,5vw,4.8rem)] font-bold leading-[0.95] tracking-[-0.04em] text-secondary">
             A Dental Care Experience Designed Around Your Needs
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-[1.02rem] leading-8 text-[#4d6a61] sm:text-lg">
+          <p className="mx-auto mt-6 max-w-3xl text-[1.02rem] leading-8 text-secondary-light sm:text-lg">
             Sarangi Dentistry is designed to feel premium without losing warmth:
             refined interiors, focused consultation, careful execution, and a
             lasting commitment to comfort.
@@ -66,7 +66,7 @@ export default function WhyChooseUsSection() {
             <SectionReveal key={feature.title} delay={index * 0.05}>
               <div className="rounded-[30px] border border-[#dcebe3] bg-white/80 p-7 shadow-[0_20px_50px_rgba(20,40,34,0.08)] backdrop-blur">
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#e7f7f0] text-[#03966a] shadow-inner">
+                  <div className="mt-1 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-background text-primary-hover shadow-inner">
                     <svg
                       className="h-6 w-6"
                       fill="none"
@@ -83,10 +83,10 @@ export default function WhyChooseUsSection() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black tracking-[-0.03em] text-[#24443a]">
+                    <h3 className="text-2xl font-black tracking-[-0.03em] text-primary">
                       {feature.title}
                     </h3>
-                    <p className="mt-3 text-[15px] leading-7 text-[#536f66]">
+                    <p className="mt-3 text-[15px] leading-7 text-secondary">
                       {feature.desc}
                     </p>
                   </div>
@@ -100,17 +100,17 @@ export default function WhyChooseUsSection() {
           <div className="rounded-[34px] border border-[#dcebe3] bg-[#eef8f2] p-8 shadow-[0_24px_60px_rgba(20,40,34,0.08)] sm:p-10">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <div className="text-xs font-bold uppercase tracking-[0.24em] text-[#6a877d]">
+                <div className="text-xs font-bold uppercase tracking-[0.24em] text-primary-hover">
                   Ready for your consultation?
                 </div>
-                <h3 className="mt-3 text-3xl font-black tracking-[-0.03em] text-[#24443a] sm:text-4xl">
+                <h3 className="mt-3 text-3xl font-black tracking-[-0.03em] text-secondary-light sm:text-4xl">
                   Let your first impression feel as good as your final result.
                 </h3>
               </div>
 
               <Link
                 href="/contact"
-                className="inline-flex shrink-0 items-center justify-center rounded-[22px] bg-[#03966a] px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_36px_rgba(3,150,106,0.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#027e59]"
+                className="inline-flex shrink-0 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_36px_rgba(3,150,106,0.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover"
               >
                 Schedule Visit
               </Link>

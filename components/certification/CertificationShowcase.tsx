@@ -108,7 +108,7 @@ export default function CertificationShowcase({
             </div>
 
             <div className="p-5 sm:p-6">
-              <div className="mb-3 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#6d877d]">
+              <div className="mb-3 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-primary-hover">
                 <span>{cert.issuer ?? "Sarangi Dentistry"}</span>
                 {cert.year ? (
                   <>
@@ -118,11 +118,11 @@ export default function CertificationShowcase({
                 ) : null}
               </div>
 
-              <h3 className="text-[1.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#24443a] transition-colors duration-300 group-hover:text-[#03966a]">
+              <h3 className="text-[1.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-secondary transition-colors duration-300 group-hover:text-primary-hover">
                 {cert.title}
               </h3>
 
-              <div className="mt-5 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-[#2f5548]">
+              <div className="mt-5 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-secondary-light">
                 View Certificate
                 <svg
                   className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"

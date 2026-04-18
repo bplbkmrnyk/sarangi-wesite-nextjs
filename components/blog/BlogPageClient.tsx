@@ -50,7 +50,7 @@ export default function BlogPageClient({
   };
 
   return (
-    <main className="min-h-screen overflow-x-clip bg-[#f7fbf9] pt-28 text-[#24443a]">
+    <main className="min-h-screen overflow-x-clip bg-background pt-28 text-secondary">
       <section className="relative overflow-hidden border-b border-[#dcebe3] bg-[linear-gradient(180deg,rgba(249,253,251,1),rgba(241,248,244,0.96))]">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-[6%] top-[10%] h-56 w-56 rounded-full bg-[#def2e8] blur-3xl" />
@@ -67,14 +67,14 @@ export default function BlogPageClient({
             transition={{ duration: 0.65, ease: EASE }}
           >
             <div className="flex flex-wrap items-center gap-4 border-b border-[#dcebe3] pb-6">
-              <div className="inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/82 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#2d6b58] shadow-[0_10px_24px_rgba(20,40,34,0.05)] backdrop-blur sm:text-[11px]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#03966a]" />
+              <div className="inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/82 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary shadow-[0_10px_24px_rgba(20,40,34,0.05)] backdrop-blur sm:text-[11px]">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary-hover" />
                 Journal & Insights
               </div>
 
               <div className="hidden h-px flex-1 bg-gradient-to-r from-[#dcebe3] to-transparent md:block" />
 
-              <div className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#6d877d]">
+              <div className="text-[11px] font-bold uppercase tracking-[0.24em] text-secondary">
                 Sarangi Dentistry Editorial
               </div>
             </div>
@@ -82,15 +82,15 @@ export default function BlogPageClient({
             <div className="grid gap-10 pt-10 lg:grid-cols-12 lg:gap-14 lg:pt-12">
               <div className="lg:col-span-8">
                 <div className="max-w-5xl">
-                  <div className="mb-6 text-[11px] font-bold uppercase tracking-[0.28em] text-[#6d877d]">
+                  <div className="mb-6 text-[11px] font-bold uppercase tracking-[0.28em] text-secondary-light">
                     Modern patient education
                   </div>
 
-                  <h1 className="max-w-[10ch] text-[clamp(3.1rem,6vw,6.6rem)] font-bold leading-[0.86] tracking-[-0.07em] text-[#21493d]">
+                  <h1 className="max-w-[10ch] text-[clamp(3.1rem,6vw,6.6rem)] font-bold leading-[0.86] tracking-[-0.07em] text-secondary">
                     Thoughtful dental reading, with a sharper editorial feel
                   </h1>
 
-                  <p className="mt-8 max-w-3xl text-[1rem] leading-7 text-[#49635a] sm:text-[1.06rem] sm:leading-8 md:text-[1.1rem]">
+                  <p className="mt-8 max-w-3xl text-[1rem] leading-7 text-secondary-light sm:text-[1.06rem] sm:leading-8 md:text-[1.1rem]">
                     In-depth articles on oral health, smile restoration,
                     preventive care, and modern treatment guidance — presented
                     in a cleaner journal-style format that feels distinct from
@@ -103,15 +103,15 @@ export default function BlogPageClient({
               <div className="lg:col-span-4">
                 <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
                   <div className="rounded-[28px] border border-[#d9e8e0] bg-white/78 p-5 shadow-[0_14px_30px_rgba(20,40,34,0.04)]">
-                    <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                    <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                       Focus
                     </div>
-                    <div className="mt-3 text-lg font-semibold leading-7 text-[#24443a]">
+                    <div className="mt-3 text-lg font-semibold leading-7 text-primary">
                       Clear patient guidance
                     </div>
                   </div>
 
-                  <div className="rounded-[28px] border border-[#d9e8e0] bg-[#24443a] p-5 text-white shadow-[0_18px_40px_rgba(20,40,34,0.10)]">
+                  <div className="rounded-[28px] border border-[#d9e8e0] bg-secondary-light p-5 text-white shadow-[0_18px_40px_rgba(20,40,34,0.10)]">
                     <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/68">
                       Tone
                     </div>
@@ -121,7 +121,7 @@ export default function BlogPageClient({
                   </div>
 
                   <div className="rounded-[28px] border border-[#d9e8e0] bg-white/78 p-5 shadow-[0_14px_30px_rgba(20,40,34,0.04)]">
-                    <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                    <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                       Topics
                     </div>
                     <div className="mt-3 flex flex-wrap gap-2">
@@ -129,7 +129,7 @@ export default function BlogPageClient({
                         (tag) => (
                           <span
                             key={tag}
-                            className="rounded-full border border-[#d7e7de] bg-[#f8fcfa] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#2f6e5b]"
+                            className="rounded-full border border-[#d7e7de] bg-[#f8fcfa] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-primary"
                           >
                             {tag}
                           </span>
@@ -151,10 +151,10 @@ export default function BlogPageClient({
                   key={item.label}
                   className="rounded-[24px] border border-[#d9e8e0] bg-white/74 p-5 shadow-[0_12px_26px_rgba(20,40,34,0.04)]"
                 >
-                  <div className="text-[2rem] font-black tracking-[-0.05em] text-[#24443a]">
+                  <div className="text-[2rem] font-black tracking-[-0.05em] text-primary">
                     {item.value}
                   </div>
-                  <div className="mt-2 text-[11px] font-bold uppercase tracking-[0.2em] text-[#6d877d]">
+                  <div className="mt-2 text-[11px] font-bold uppercase tracking-[0.2em] text-secondary-light">
                     {item.label}
                   </div>
                 </div>
@@ -191,38 +191,38 @@ export default function BlogPageClient({
                   </div>
 
                   <div className="relative z-10">
-                    <div className="mb-5 inline-flex items-center rounded-full border border-[#d6e7de] bg-white/76 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2f6e5b]">
+                    <div className="mb-5 inline-flex items-center rounded-full border border-[#d6e7de] bg-white/76 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary-hover">
                       Featured Article
                     </div>
 
-                    <div className="mb-4 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#6d877d]">
+                    <div className="mb-4 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.18em] text-secondary-light">
                       <span>{featuredBlog.category}</span>
                       <span className="h-1 w-1 rounded-full bg-[#9bb7aa]" />
                       <span>{featuredBlog.readTime}</span>
                     </div>
 
-                    <h2 className="text-[clamp(2rem,4vw,3.3rem)] font-bold leading-[0.95] tracking-[-0.05em] text-[#24443a]">
+                    <h2 className="text-[clamp(2rem,4vw,3.3rem)] font-bold leading-[0.95] tracking-[-0.05em] text-secondary">
                       {featuredBlog.title}
                     </h2>
 
-                    <p className="mt-5 text-[1rem] leading-7 text-[#49635a] sm:text-[1.05rem] sm:leading-8">
+                    <p className="mt-5 text-[1rem] leading-7 text-secondary-light sm:text-[1.05rem] sm:leading-8">
                       {featuredBlog.excerpt}
                     </p>
                   </div>
 
                   <div className="relative z-10 mt-8 flex items-center justify-between gap-4 border-t border-[#dcebe3] pt-6">
                     <div>
-                      <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#6d877d]">
+                      <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary-hover">
                         By {featuredBlog.author}
                       </div>
-                      <div className="mt-1 text-sm text-[#49635a]">
+                      <div className="mt-1 text-sm text-secondary">
                         {featuredBlog.date}
                       </div>
                     </div>
 
                     <Link
                       href={`/blog/${featuredBlog.id}`}
-                      className="inline-flex items-center gap-2 rounded-full border border-[#cfe0d7] bg-white px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#2f5548] shadow-[0_8px_18px_rgba(20,40,34,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#b8d7c7] hover:text-[#03966a]"
+                      className="inline-flex items-center gap-2 rounded-full border border-[#cfe0d7] bg-white px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-secondary-light shadow-[0_8px_18px_rgba(20,40,34,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary-hover hover:text-[#03966a]"
                     >
                       Read Article
                       <svg
@@ -251,15 +251,15 @@ export default function BlogPageClient({
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col gap-4 border-b border-[#dcebe3] pb-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+              <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                 All Posts
               </div>
-              <h3 className="mt-2 text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-[-0.04em] text-[#24443a]">
+              <h3 className="mt-2 text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-[-0.04em] text-secondary">
                 Explore the latest insights
               </h3>
             </div>
 
-            <p className="max-w-xl text-sm leading-6 text-[#5b756b]">
+            <p className="max-w-xl text-sm leading-6 text-primary-hover">
               Articles designed to inform patients with clarity, warmth, and a
               more contemporary editorial presentation.
             </p>
@@ -293,34 +293,34 @@ export default function BlogPageClient({
 
                   <div className="flex flex-col justify-between p-6 md:col-span-7 sm:p-7">
                     <div>
-                      <div className="mb-4 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#6d877d]">
+                      <div className="mb-4 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
                         <span>{blog.category}</span>
                         <span className="h-1 w-1 rounded-full bg-[#9bb7aa]" />
                         <span>{blog.readTime}</span>
                       </div>
 
-                      <h4 className="text-[1.55rem] font-bold leading-[1.02] tracking-[-0.04em] text-[#24443a] transition-colors duration-300 group-hover:text-[#03966a]">
+                      <h4 className="text-[1.55rem] font-bold leading-[1.02] tracking-[-0.04em] text-secondary transition-colors duration-300 group-hover:text-primary">
                         {blog.title}
                       </h4>
 
-                      <p className="mt-4 line-clamp-3 text-[0.98rem] leading-7 text-[#4a635a]">
+                      <p className="mt-4 line-clamp-3 text-[0.98rem] leading-7 text-secondary-light">
                         {blog.excerpt}
                       </p>
                     </div>
 
                     <div className="mt-8 flex items-center justify-between gap-4 border-t border-[#dcebe3] pt-5">
                       <div>
-                        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#6d877d]">
+                        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-secondary-light">
                           {blog.author}
                         </div>
-                        <div className="mt-1 text-sm text-[#5b756b]">
+                        <div className="mt-1 text-sm text-primary-hover">
                           {blog.date}
                         </div>
                       </div>
 
                       <Link
                         href={`/blog/${blog.id}`}
-                        className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-[#2f5548] transition-colors duration-300 hover:text-[#03966a]"
+                        className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-primary transition-colors duration-300 hover:text-secondary-light"
                       >
                         Read More
                         <svg

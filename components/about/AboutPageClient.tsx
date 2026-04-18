@@ -181,7 +181,7 @@ export default function AboutPageClient() {
                 Dentistry shaped by trust, precision, and care
               </h1>
 
-              <p className="mx-auto mt-6 max-w-3xl text-[0.98rem] tracking-normal leading-7 font-light text-white/88 sm:text-[1.04rem] sm:leading-8 md:text-lg">
+              <p className="mx-auto mt-6 max-w-3xl text-[0.98rem] tracking-normal leading-7 font-light text-white sm:text-[1.04rem] sm:leading-8 md:text-lg">
                 Discover the people, philosophy, and patient-first approach
                 behind Sarangi Dentistry.
               </p>
@@ -205,7 +205,7 @@ export default function AboutPageClient() {
               left: aboutInset,
               right: aboutInset,
             }}
-            className="absolute inset-x-0 top-0 z-20 min-h-screen origin-top overflow-hidden bg-[#f6fbf8] will-change-transform"
+            className="absolute inset-x-0 top-0 z-20 min-h-screen origin-top overflow-hidden bg-background will-change-transform"
           >
             <div className="pointer-events-none absolute inset-0">
               <div
@@ -214,7 +214,7 @@ export default function AboutPageClient() {
                   backgroundImage: "url('/assets/sketch_it_sarangi.png')",
                 }}
               />
-              <div className="absolute inset-0 bg-[#f6fbf8]" />
+              <div className="absolute inset-0 bg-background" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(3,150,106,0.08),transparent_24%),radial-gradient(circle_at_86%_18%,rgba(36,68,58,0.04),transparent_24%),radial-gradient(circle_at_50%_82%,rgba(3,150,106,0.05),transparent_28%)]" />
             </div>
 
@@ -237,17 +237,17 @@ export default function AboutPageClient() {
                     transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                     className="lg:col-span-7"
                   >
-                    <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d6e7de] bg-white/82 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2d6b58] shadow-[0_10px_20px_rgba(20,40,34,0.04)] backdrop-blur sm:text-[11px]">
-                      <span className="h-2.5 w-2.5 rounded-full bg-[#03966a]" />
+                    <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d6e7de] bg-white/82 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-secondary-light shadow-[0_10px_20px_rgba(20,40,34,0.04)] backdrop-blur sm:text-[11px]">
+                      <span className="h-2.5 w-2.5 rounded-full bg-primary-hover" />
                       Who We Are
                     </div>
 
                     <div className="max-w-4xl border-l border-[#d8e8df] pl-0 lg:pl-8">
-                      <h2 className="max-w-[10ch] text-[clamp(2.8rem,7vw,5.2rem)] font-bold leading-[0.92] tracking-[-0.05em] text-[#24443a]">
+                      <h2 className="max-w-[10ch] text-[clamp(2.8rem,7vw,5.2rem)] font-bold leading-[0.92] tracking-[-0.05em] text-secondary">
                         About Sarangi Dentistry
                       </h2>
 
-                      <div className="mt-6 max-w-3xl space-y-5 text-[0.98rem] leading-7 text-[#39554b] sm:text-[1.02rem] sm:leading-8 md:text-[1.05rem]">
+                      <div className="mt-6 max-w-3xl space-y-5 text-[0.98rem] leading-7 text-secondary-light sm:text-[1.02rem] sm:leading-8 md:text-[1.05rem]">
                         <p>
                           Sarangi Dentistry is a modern multi-specialty dental
                           clinic in Bhubaneswar, committed to delivering a
@@ -257,7 +257,7 @@ export default function AboutPageClient() {
 
                         <p>
                           Under the guidance of{" "}
-                          <span className="font-semibold text-[#03966a]">
+                          <span className="font-semibold text-primary-hover">
                             Dr. Soumendra Sarangi
                           </span>
                           , our clinic brings together experienced
@@ -278,14 +278,14 @@ export default function AboutPageClient() {
                     <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                       <Link
                         href="/contact"
-                        className="inline-flex min-h-13.5 items-center justify-center rounded-[22px] bg-[#5aa876] px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#4a9766]"
+                        className="inline-flex min-h-13.5 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover"
                       >
                         Book Appointment
                       </Link>
 
                       <Link
                         href="/procedure"
-                        className="inline-flex min-h-13.5 items-center justify-center rounded-[22px] border border-[#cfdfd6] bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-[#314d44] shadow-[0_10px_24px_rgba(20,40,34,0.05)] transition-all duration-300 hover:-translate-y-1"
+                        className="inline-flex min-h-13.5 items-center justify-center rounded-[22px] border border-[#cfdfd6] bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-primary-hover shadow-[0_10px_24px_rgba(20,40,34,0.05)] transition-all duration-300 hover:-translate-y-1"
                       >
                         Explore Procedures
                       </Link>
@@ -326,10 +326,10 @@ export default function AboutPageClient() {
                             }}
                             className="rounded-[18px] border border-[#d9e8e0] bg-[#f9fdfb] px-4 py-4"
                           >
-                            <div className="text-[1.35rem] font-black tracking-[-0.04em] text-[#24443a] sm:text-[1.6rem]">
+                            <div className="text-[1.35rem] font-black tracking-[-0.04em] text-secondary sm:text-[1.6rem]">
                               {item.value}
                             </div>
-                            <div className="mt-1 text-[9px] font-bold uppercase tracking-[0.2em] text-[#6d877d] sm:text-[10px]">
+                            <div className="mt-1 text-[9px] font-bold uppercase tracking-[0.2em] text-secondary-light sm:text-[10px]">
                               {item.label}
                             </div>
                           </motion.div>
@@ -344,7 +344,7 @@ export default function AboutPageClient() {
         </div>
       </section>
 
-      <section className="relative z-30 overflow-hidden bg-[#f6fbf8] px-5 pb-24 pt-16 sm:px-6 sm:pt-20 md:px-10 md:pb-32 md:pt-24 lg:px-16">
+      <section className="relative z-30 overflow-hidden bg-background px-5 pb-24 pt-16 sm:px-6 sm:pt-20 md:px-10 md:pb-32 md:pt-24 lg:px-16">
         <div className="pointer-events-none absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.05]"
@@ -362,16 +362,16 @@ export default function AboutPageClient() {
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/80 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2d6b58] shadow-[0_10px_20px_rgba(20,40,34,0.04)] backdrop-blur sm:text-[11px]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#03966a]" />
+              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/80 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-secondary-light shadow-[0_10px_20px_rgba(20,40,34,0.04)] backdrop-blur sm:text-[11px]">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary-hover" />
                 Why Patients Choose Us
               </div>
 
-              <h2 className="text-[clamp(2.3rem,5vw,4.8rem)] font-bold leading-[0.96] tracking-normal text-[#24443a]">
+              <h2 className="text-[clamp(2.3rem,5vw,4.8rem)] font-bold leading-[0.96] tracking-normal text-secondary">
                 Thoughtful dentistry built around trust and excellence
               </h2>
 
-              <p className="mt-5 text-[1rem] leading-7 text-[#4a635a] sm:text-[1.05rem] sm:leading-8">
+              <p className="mt-5 text-[1rem] leading-7 text-secondary-light sm:text-[1.05rem] sm:leading-8">
                 We combine advanced care, aesthetic detail, and a calm
                 patient-first atmosphere to create a dental experience that
                 feels modern, transparent, and deeply reassuring.
@@ -390,15 +390,15 @@ export default function AboutPageClient() {
                     delay: i * 0.07,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="group rounded-[28px] border border-[#d9e8e0] bg-white/86 p-7 shadow-[0_18px_40px_rgba(20,40,34,0.05)] transition-all duration-500 hover:-translate-y-1.5 hover:border-[#bfdccf] hover:shadow-[0_24px_50px_rgba(20,40,34,0.08)]"
+                  className="group rounded-[28px] border border-secondary bg-white/86 p-7 shadow-[0_18px_40px_rgba(20,40,34,0.05)] transition-all duration-500 hover:-translate-y-1.5 hover:border-primary-hover hover:shadow-[0_24px_50px_rgba(20,40,34,0.08)]"
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#edf8f2] text-lg font-black text-[#03966a]">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-background text-lg font-black text-secondary-light">
                     0{i + 1}
                   </div>
-                  <h3 className="mb-4 text-[1.32rem] font-semibold leading-tight text-[#24443a]">
+                  <h3 className="mb-4 text-[1.32rem] font-semibold leading-tight text-primary-hover">
                     {item.title}
                   </h3>
-                  <p className="leading-7 text-[#4a635a]">{item.text}</p>
+                  <p className="leading-7 text-secondary-light">{item.text}</p>
                 </motion.div>
               ))}
             </div>
@@ -412,16 +412,16 @@ export default function AboutPageClient() {
             className="grid gap-8 lg:grid-cols-2"
           >
             <div className="rounded-[30px] border border-[#d9e8e0] bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(244,250,246,0.95))] p-8 shadow-[0_24px_60px_rgba(20,40,34,0.05)] sm:p-10 md:p-12">
-              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-[#f8fffa] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2d6b58] sm:text-[11px]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#03966a]" />
+              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-background px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary-hover" />
                 Our Mission
               </div>
 
-              <h3 className="max-w-[14ch] text-[clamp(2rem,4vw,3.4rem)] font-bold leading-[0.97] tracking-[-0.04em] text-[#24443a]">
+              <h3 className="max-w-[14ch] text-[clamp(2rem,4vw,3.4rem)] font-bold leading-[0.97] tracking-[-0.04em] text-secondary">
                 Enhancing oral health through personalized care
               </h3>
 
-              <p className="mt-6 text-[1rem] leading-7 text-[#4a635a] sm:text-[1.05rem] sm:leading-8">
+              <p className="mt-6 text-[1rem] leading-7 text-secondary-light sm:text-[1.05rem] sm:leading-8">
                 Our mission is to improve the oral health and confidence of our
                 patients through careful diagnosis, personalized treatment
                 planning, and modern dentistry delivered with empathy,
@@ -430,16 +430,16 @@ export default function AboutPageClient() {
             </div>
 
             <div className="rounded-[30px] border border-[#dbe9e1] bg-[linear-gradient(135deg,rgba(235,247,240,0.96),rgba(255,255,255,0.92))] p-8 shadow-[0_24px_60px_rgba(20,40,34,0.05)] sm:p-10 md:p-12">
-              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/85 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2d6b58] sm:text-[11px]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#03966a]" />
+              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/85 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary-hover" />
                 Our Vision
               </div>
 
-              <h3 className="max-w-[13ch] text-[clamp(2rem,4vw,3.4rem)] font-bold leading-[0.97] tracking-[-0.04em] text-[#24443a]">
+              <h3 className="max-w-[13ch] text-[clamp(2rem,4vw,3.4rem)] font-bold leading-[0.97] tracking-[-0.04em] text-secondary">
                 Redefining the dental experience with warmth and precision
               </h3>
 
-              <p className="mt-6 text-[1rem] leading-7 text-[#4a635a] sm:text-[1.05rem] sm:leading-8">
+              <p className="mt-6 text-[1rem] leading-7 text-secondary-light sm:text-[1.05rem] sm:leading-8">
                 We envision a future where every dental visit feels refined,
                 comfortable, and confidence-building — where advanced
                 technology, compassionate care, and aesthetic detail come
@@ -455,12 +455,12 @@ export default function AboutPageClient() {
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/80 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2d6b58] shadow-[0_10px_20px_rgba(20,40,34,0.04)] backdrop-blur sm:text-[11px]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#03966a]" />
+              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/80 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary shadow-[0_10px_20px_rgba(20,40,34,0.04)] backdrop-blur sm:text-[11px]">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary-hover" />
                 Our Core Values
               </div>
 
-              <h2 className="text-[clamp(2.3rem,5vw,4.6rem)] font-bold leading-[0.96] tracking-[-0.045em] text-[#24443a]">
+              <h2 className="text-[clamp(2.3rem,5vw,4.6rem)] font-bold leading-[0.96] tracking-[-0.045em] text-secondary">
                 Principles that shape every patient experience
               </h2>
             </div>
@@ -479,13 +479,13 @@ export default function AboutPageClient() {
                   }}
                   className="rounded-[26px] border border-[#d9e8e0] bg-white/88 p-6 shadow-[0_18px_40px_rgba(20,40,34,0.05)] transition-all duration-500 hover:-translate-y-1 hover:border-[#c1ddd1] hover:shadow-[0_22px_46px_rgba(20,40,34,0.07)]"
                 >
-                  <div className="mb-5 text-[2.2rem] font-black tracking-[-0.05em] text-[#03966a]">
+                  <div className="mb-5 text-[2.2rem] font-black tracking-[-0.05em] text-secondary-light">
                     {value.num}
                   </div>
-                  <h4 className="mb-3 text-[1.18rem] font-semibold text-[#24443a]">
+                  <h4 className="mb-3 text-[1.18rem] font-semibold text-primary-hover">
                     {value.title}
                   </h4>
-                  <p className="text-[15px] leading-7 text-[#4a635a]">
+                  <p className="text-[15px] leading-7 text-secondary">
                     {value.desc}
                   </p>
                 </motion.div>
@@ -502,16 +502,16 @@ export default function AboutPageClient() {
           >
             <div className="grid items-center gap-10 px-6 py-10 sm:px-8 md:px-10 md:py-12 lg:grid-cols-12 lg:px-14">
               <div className="lg:col-span-7">
-                <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/80 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2d6b58] sm:text-[11px]">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#03966a]" />
+                <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/80 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary-hover sm:text-[11px]">
+                  <span className="h-2.5 w-2.5 rounded-full bg-primary-hover" />
                   Begin Your Smile Journey
                 </div>
 
-                <h2 className="max-w-[12ch] text-[clamp(2.2rem,4.8vw,4rem)] font-bold leading-[0.96] tracking-[-0.04em] text-[#24443a]">
+                <h2 className="max-w-[12ch] text-[clamp(2.2rem,4.8vw,4rem)] font-bold leading-[0.96] tracking-[-0.04em] text-secondary">
                   Experience dental care that feels calm, modern, and personal
                 </h2>
 
-                <p className="mt-5 max-w-2xl text-[1rem] leading-7 text-[#4a635a] sm:text-[1.05rem] sm:leading-8">
+                <p className="mt-5 max-w-2xl text-[1rem] leading-7 text-secondary-light sm:text-[1.05rem] sm:leading-8">
                   Whether you are planning a routine visit, a smile enhancement,
                   or a more advanced procedure, we are here to guide you with
                   expert care and a patient experience designed around comfort
@@ -521,14 +521,14 @@ export default function AboutPageClient() {
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                   <Link
                     href="/contact"
-                    className="inline-flex min-h-14 items-center justify-center rounded-[22px] bg-[#5aa876] px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#4a9766]"
+                    className="inline-flex min-h-14 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover"
                   >
                     Schedule a Visit
                   </Link>
 
                   <Link
                     href="/gallery"
-                    className="inline-flex min-h-14 items-center justify-center rounded-[22px] border border-[#cfdfd6] bg-white/88 px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-[#314d44] shadow-[0_10px_24px_rgba(20,40,34,0.05)] transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex min-h-14 items-center justify-center rounded-[22px] border border-[#cfdfd6] bg-white/88 px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-primary-hover shadow-[0_10px_24px_rgba(20,40,34,0.05)] transition-all duration-300 hover:-translate-y-1"
                   >
                     Explore Clinic
                   </Link>
@@ -553,7 +553,7 @@ export default function AboutPageClient() {
                         delay: index * 0.06,
                         ease: [0.22, 1, 0.36, 1],
                       }}
-                      className="rounded-[22px] border border-[#d9e8e0] bg-white/92 p-5 text-sm font-semibold uppercase tracking-[0.18em] text-[#2f5548] shadow-[0_12px_28px_rgba(20,40,34,0.04)]"
+                      className="rounded-[22px] border border-[#d9e8e0] bg-white/92 p-5 text-sm font-semibold uppercase tracking-[0.18em] text-secondary-light shadow-[0_12px_28px_rgba(20,40,34,0.04)]"
                     >
                       {item}
                     </motion.div>

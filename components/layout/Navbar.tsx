@@ -95,9 +95,9 @@ export default function Navbar() {
           <div className="shrink-0">
             <Link
               href="/"
-              className="cursor-grow text-[1.65rem] font-bold tracking-tight text-[#17332b] transition-colors duration-300 md:text-3xl"
+              className="cursor-grow text-[1.65rem] font-bold tracking-tight text-secondary transition-colors duration-300 md:text-3xl"
             >
-              Sarangi <span className="text-[#4ea172]">Dentistry</span>
+              Sarangi <span className="text-primary">Dentistry</span>
             </Link>
           </div>
 
@@ -111,8 +111,8 @@ export default function Navbar() {
                     href={item.path}
                     className={`cursor-grow group relative isolate flex items-center overflow-hidden rounded-full px-4 py-2.5 font-mono text-[0.98rem] font-semibold transition-all duration-300 ${
                       active
-                        ? "text-[#03966a]"
-                        : "text-[#17332b] hover:text-[#03966a]"
+                        ? "text-primary"
+                        : "text-secondary hover:text-primary-hover"
                     }`}
                   >
                     <span className="relative z-20">{item.name}</span>
@@ -120,7 +120,7 @@ export default function Navbar() {
                     {item.hasDropdown && (
                       <svg
                         className={`ml-1 h-4 w-4 transition-transform duration-300 ${
-                          active ? "text-[#03966a]" : ""
+                          active ? "text-primary" : ""
                         } group-hover/dropdown:rotate-180`}
                         fill="none"
                         viewBox="0 0 24 24"
@@ -136,7 +136,7 @@ export default function Navbar() {
                     )}
 
                     <span
-                      className={`absolute bottom-1.5 left-4 right-4 z-20 h-0.5 origin-center bg-[#03966a] transition-transform duration-300 ${
+                      className={`absolute bottom-1.5 left-4 right-4 z-20 h-0.5 origin-center bg-accent-soft transition-transform duration-300 ${
                         active
                           ? "scale-x-100"
                           : "scale-x-0 group-hover:scale-x-100"
@@ -151,7 +151,7 @@ export default function Navbar() {
                         <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-[#03966a]/6 blur-3xl" />
 
                         <div className="mb-3 flex items-center justify-between border-b border-[#dcebe4] pb-3">
-                          <h3 className="font-mono text-lg font-bold tracking-tight text-[#03966a]">
+                          <h3 className="font-mono text-lg font-bold tracking-tight text-primary">
                             Our Procedures
                           </h3>
                         </div>
@@ -168,16 +168,16 @@ export default function Navbar() {
                                 href={proc.path}
                                 className={`cursor-grow group/item flex flex-col rounded-2xl px-3 py-3 transition-colors duration-300 ${
                                   procedureActive
-                                    ? "bg-[#edf8f2]"
-                                    : "hover:bg-[#f3fbf6]"
+                                    ? "bg-transparent"
+                                    : "hover:bg-accent-soft"
                                 }`}
                               >
                                 <div className="flex items-center justify-between gap-3">
                                   <span
                                     className={`font-semibold transition-colors duration-300 ${
                                       procedureActive
-                                        ? "text-[#03966a]"
-                                        : "text-[#17332b] group-hover/item:text-[#03966a]"
+                                        ? "text-primary"
+                                        : "text-secondary group-hover/item:text-white"
                                     }`}
                                   >
                                     {proc.title}
@@ -185,8 +185,8 @@ export default function Navbar() {
                                   <span
                                     className={`transition-all duration-300 ${
                                       procedureActive
-                                        ? "translate-x-0 text-[#03966a] opacity-100"
-                                        : "-translate-x-2 text-[#03966a] opacity-0 group-hover/item:translate-x-0 group-hover/item:opacity-100"
+                                        ? "translate-x-0 text-primary opacity-100"
+                                        : "-translate-x-2 text-primary opacity-0 group-hover/item:translate-x-0 group-hover/item:opacity-100"
                                     }`}
                                   >
                                     →
@@ -205,16 +205,16 @@ export default function Navbar() {
 
             <Link
               href="/book-appointment"
-              className={`cursor-grow group relative ml-4 flex shrink-0 items-center justify-center overflow-hidden bg-[#03966a] font-mono font-bold text-white shadow-lg shadow-[#03966a]/20 transition-all duration-300 hover:-translate-y-0.5 md:ml-6 ${
+              className={`cursor-grow group relative ml-4 flex shrink-0 items-center justify-center overflow-hidden bg-primary font-mono font-bold text-white shadow-lg shadow-[#03966a]/20 transition-all duration-300 hover:-translate-y-0.5 md:ml-6 ${
                 isScrolled
                   ? "h-10 w-10 rounded-full md:h-11 md:w-11"
                   : "whitespace-nowrap rounded-full px-6 py-2.5"
               }`}
               title="Book Appointment"
             >
-              <div className="absolute -inset-4 z-0 skew-x-12 translate-x-[-120%] bg-[#00ebb0] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:translate-x-0" />
+              <div className="absolute -inset-4 z-0 skew-x-12 translate-x-[-120%] bg-primary-hover transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:translate-x-0" />
               <span
-                className={`relative z-10 flex items-center justify-center transition-colors duration-500 group-hover:text-[#17332b] ${
+                className={`relative z-10 flex items-center justify-center transition-colors duration-500 group-hover:text-white ${
                   !isScrolled ? "whitespace-nowrap" : ""
                 }`}
               >

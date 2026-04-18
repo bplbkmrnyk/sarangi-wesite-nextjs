@@ -37,18 +37,18 @@ export default function GalleryPageClient({ items }: GalleryPageClientProps) {
             className="grid items-end gap-8 lg:grid-cols-12"
           >
             <div className="lg:col-span-7">
-              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/82 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#2d6b58] shadow-[0_10px_24px_rgba(20,40,34,0.05)] backdrop-blur sm:text-[11px]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#03966a]" />
+              <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/82 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary shadow-[0_10px_24px_rgba(20,40,34,0.05)] backdrop-blur sm:text-[11px]">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary-hover" />
                 Sarangi Dentistry Gallery
               </div>
 
-              <h1 className="max-w-[11ch] text-[clamp(3rem,6vw,6.2rem)] font-bold leading-[0.9] tracking-[-0.06em] text-[#21493d]">
+              <h1 className="max-w-[11ch] text-[clamp(3rem,6vw,6.2rem)] font-bold leading-[0.9] tracking-[-0.06em] text-secondary">
                 Moments, spaces, and the care experience
               </h1>
             </div>
 
             <div className="lg:col-span-5 lg:pb-3">
-              <p className="max-w-xl text-[1rem] leading-7 text-[#4a635a] sm:text-[1.05rem] sm:leading-8">
+              <p className="max-w-xl text-[1rem] leading-7 text-primary-hover sm:text-[1.05rem] sm:leading-8">
                 Explore our clinic through a more immersive visual experience.
                 Tap any image to expand it and move through the gallery with a
                 more dramatic, refined presentation.

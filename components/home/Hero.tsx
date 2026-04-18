@@ -51,7 +51,7 @@ function AnimatedHeading({ text }: { text: string }) {
   const words = useMemo(() => text.split(" "), [text]);
 
   const headingClassName =
-    "mx-auto max-w-[12ch] pb-[0.08em] text-center text-5xl font-bold leading-[0.99] tracking-normal text-[#24443a] sm:max-w-[11ch] sm:leading-[0.99] md:max-w-[12ch] md:text-7xl md:leading-[0.99] lg:max-w-[14ch] lg:leading-[0.99]";
+    "mx-auto max-w-[12ch] pb-[0.08em] text-center text-5xl font-bold leading-[0.99] tracking-normal text-secondary sm:max-w-[11ch] sm:leading-[0.99] md:max-w-[12ch] md:text-7xl md:leading-[0.99] lg:max-w-[14ch] lg:leading-[0.99]";
 
   if (prefersReducedMotion) {
     return <h1 className={headingClassName}>{text}</h1>;
@@ -166,7 +166,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen isolate overflow-hidden border-b border-[#dbe9e1] bg-[#f8fffa]"
+      className="relative min-h-screen isolate overflow-hidden border-b border-[#dbe9e1] bg-background"
     >
       <motion.div
         style={{ opacity: bgOpacity }}
@@ -212,7 +212,7 @@ export default function Hero() {
               >
                 <AnimatedHeading text={activeSlide.head} />
 
-                <p className="mx-auto mt-4 max-w-3xl text-[0.98rem] font-light leading-7 text-center text-[#000000] sm:mt-5 sm:text-[1.02rem] sm:leading-8 md:text-[clamp(1rem,1.7vw,1.25rem)]">
+                <p className="mx-auto mt-4 max-w-3xl text-[0.98rem] font-light leading-7 text-center text-foreground sm:mt-5 sm:text-[1.02rem] sm:leading-8 md:text-[clamp(1rem,1.7vw,1.25rem)]">
                   {activeSlide.subhead}
                 </p>
               </motion.div>
@@ -221,14 +221,14 @@ export default function Hero() {
             <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:flex-row sm:items-center sm:justify-center">
               <Link
                 href="/contact"
-                className="hidden min-h-14 items-center justify-center rounded-[22px] bg-[#3ea16f] px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#2f8e60] md:inline-flex sm:tracking-[0.24em]"
+                className="hidden min-h-14 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover md:inline-flex sm:tracking-[0.24em]"
               >
                 Book Appointment
               </Link>
 
               <Link
                 href="/gallery"
-                className="hidden min-h-14 items-center justify-center rounded-[22px] border border-[#cfe0d7] bg-white/82 px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-[#314d44] shadow-[0_10px_24px_rgba(20,40,34,0.05)] transition-all duration-300 hover:-translate-y-1 md:inline-flex sm:tracking-[0.24em]"
+                className="hidden min-h-14 items-center justify-center rounded-[22px] border border-[#cfe0d7] bg-white/82 px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-primary-hover shadow-[0_10px_24px_rgba(20,40,34,0.05)] transition-all duration-300 hover:-translate-y-1 md:inline-flex sm:tracking-[0.24em]"
               >
                 Explore Clinic
               </Link>
@@ -244,10 +244,10 @@ export default function Hero() {
                   key={item.label}
                   className="rounded-3xl border border-[#d9e8e0] bg-white/78 p-5 shadow-[0_18px_40px_rgba(20,40,34,0.06)] backdrop-blur"
                 >
-                  <div className="text-[2.15rem] font-black tracking-[-0.04em] text-[#24443a] sm:text-4xl">
+                  <div className="text-[2.15rem] font-black tracking-[-0.04em] text-secondary sm:text-4xl">
                     {item.value}
                   </div>
-                  <div className="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#6d877d] sm:text-xs sm:tracking-[0.2em]">
+                  <div className="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] text-secondary-light sm:text-xs sm:tracking-[0.2em]">
                     {item.label}
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export default function Hero() {
                   <div className="absolute inset-0 rounded-[26px] bg-linear-to-t from-[#0c1b15]/42 via-transparent to-white/10 sm:rounded-[30px] md:rounded-[34px]" />
 
                   <div className="absolute left-4 top-4 max-w-[calc(100%-2rem)] rounded-2xl border border-white/20 bg-black/15 px-4 py-3 text-white backdrop-blur-md sm:left-5 sm:top-5">
-                    <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">
+                    <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-secondary">
                       Sarangi Dentistry
                     </div>
                     <div className="mt-1 text-sm font-medium">

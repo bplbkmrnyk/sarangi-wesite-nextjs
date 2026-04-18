@@ -43,7 +43,7 @@ export default function ProceduresPageClient({
   };
 
   return (
-    <main className="min-h-screen overflow-x-clip bg-[#f6fbf8] text-[#24443a]">
+    <main className="min-h-screen overflow-x-clip bg-background text-secondary">
       <section className="relative max-h-[60vh] overflow-hidden border-b border-[#dcebe3] bg-[linear-gradient(180deg,rgba(247,252,249,1),rgba(240,248,243,0.98))]">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.9),rgba(255,255,255,0.5)_30%,transparent_68%)]" />
@@ -66,11 +66,11 @@ export default function ProceduresPageClient({
             transition={{ duration: 0.65, ease: EASE }}
             className="mx-auto max-w-5xl text-center"
           >
-            <h1 className="text-[clamp(3rem,6vw,6.25rem)] font-bold leading-[0.9] tracking-normal text-[#21493d]">
+            <h1 className="text-[clamp(3rem,6vw,6.25rem)] font-bold leading-[0.9] tracking-normal text-secondary">
               Our Dental Procedures
             </h1>
 
-            <p className="mx-auto mt-6 max-w-4xl text-[1rem] leading-7 text-[#4a635a] sm:text-[1.05rem] sm:leading-8 md:text-[1.1rem]">
+            <p className="mx-auto mt-6 max-w-4xl text-[1rem] leading-7 text-secondary-light sm:text-[1.05rem] sm:leading-8 md:text-[1.1rem]">
               Explore our specialized treatments designed to restore oral
               health, improve function, and enhance smile aesthetics with
               thoughtful care and modern dental expertise.
@@ -103,33 +103,33 @@ export default function ProceduresPageClient({
                     className="aspect-[4/2.85] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                   />
 
-                  <div className="absolute left-4 top-4 z-20 inline-flex items-center rounded-full border border-white/30 bg-white/15 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur">
+                  <div className="absolute left-4 top-4 z-20 inline-flex items-center rounded-full border border-white/30 bg-white/15 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-secondary backdrop-blur">
                     Procedure
                   </div>
                 </div>
 
                 <div className="p-6 sm:p-7">
                   <div className="mb-4 flex items-center justify-between gap-3">
-                    <span className="inline-flex items-center rounded-full bg-[#edf8f2] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2f6e5b]">
+                    <span className="inline-flex items-center rounded-full bg-[#edf8f2] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary-hover">
                       Dental Care
                     </span>
-                    <span className="text-sm font-semibold tracking-[-0.02em] text-[#03966a]">
+                    <span className="text-sm font-semibold tracking-[-0.02em] text-accent-soft">
                       {(index + 1).toString().padStart(2, "0")}
                     </span>
                   </div>
 
-                  <h2 className="text-[1.45rem] font-bold leading-tight tracking-[-0.03em] text-[#24443a] transition-colors duration-300 group-hover:text-[#03966a]">
+                  <h2 className="text-[1.45rem] font-bold leading-tight tracking-[-0.03em] text-secondary transition-colors duration-300 group-hover:text-primary">
                     {procedure.title}
                   </h2>
 
-                  <p className="mt-4 line-clamp-4 text-[0.98rem] leading-7 text-[#4a635a]">
+                  <p className="mt-4 line-clamp-4 text-[0.98rem] leading-7 text-secondary-light">
                     {procedure.shortText}
                   </p>
 
                   <div className="mt-6">
                     <Link
                       href={procedure.path}
-                      className="inline-flex items-center gap-2 rounded-full border border-[#cfe3d8] bg-white px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#2f5548] shadow-[0_8px_18px_rgba(20,40,34,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#b8d7c7] hover:text-[#03966a]"
+                      className="inline-flex items-center gap-2 rounded-full border border-[#cfe3d8] bg-white px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-primary-hover shadow-[0_8px_18px_rgba(20,40,34,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#b8d7c7] hover:text-secondary"
                     >
                       Know More
                       <svg

@@ -116,21 +116,21 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
             className="grid gap-10 lg:grid-cols-12 lg:items-end"
           >
             <div className="lg:col-span-7">
-              <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/84 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#2d6b58] shadow-[0_10px_24px_rgba(20,40,34,0.05)] backdrop-blur sm:text-[11px]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#03966a]" />
+              <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#d8e8df] bg-white/84 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary-hover shadow-[0_10px_24px_rgba(20,40,34,0.05)] backdrop-blur sm:text-[11px]">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary-hover" />
                 Contact & Appointments
               </div>
 
               <div className="max-w-5xl">
-                <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.28em] text-[#6d877d]">
+                <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.28em] text-secondary-light">
                   Sarangi Dentistry · Bhubaneswar
                 </div>
 
-                <h1 className="max-w-[9ch] text-[clamp(3.2rem,6vw,6.8rem)] font-bold leading-[0.84] tracking-[-0.075em] text-[#21493d]">
+                <h1 className="max-w-[9ch] text-[clamp(3.2rem,6vw,6.8rem)] font-bold leading-[0.84] tracking-[-0.075em] text-secondary">
                   Contact designed to feel as calm as the clinic itself
                 </h1>
 
-                <p className="mt-8 max-w-3xl text-[1rem] leading-7 text-[#49635a] sm:text-[1.06rem] sm:leading-8 md:text-[1.12rem]">
+                <p className="mt-8 max-w-3xl text-[1rem] leading-7 text-secondary-light sm:text-[1.06rem] sm:leading-8 md:text-[1.12rem]">
                   Reach out for appointments, directions, and treatment guidance
                   through a cleaner, more refined contact experience — designed
                   to feel reassuring before you even step into the clinic.
@@ -146,10 +146,10 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
                       key={item.label}
                       className="rounded-[24px] border border-[#d9e8e0] bg-white/76 p-5 shadow-[0_12px_26px_rgba(20,40,34,0.04)]"
                     >
-                      <div className="text-[1.95rem] font-black tracking-[-0.05em] text-[#24443a]">
+                      <div className="text-[1.95rem] font-black tracking-[-0.05em] text-primary-hover">
                         {item.value}
                       </div>
-                      <div className="mt-2 text-[11px] font-bold uppercase tracking-[0.2em] text-[#6d877d]">
+                      <div className="mt-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
                         {item.label}
                       </div>
                     </div>
@@ -166,15 +166,15 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
                 <div className="relative overflow-hidden rounded-[34px] border border-[#dcebe3] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(243,249,245,0.95))] p-6 shadow-[0_24px_60px_rgba(20,40,34,0.07)] backdrop-blur sm:p-7">
                   <div className="mb-6 flex items-center justify-between border-b border-[#dcebe3] pb-5">
                     <div>
-                      <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                      <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary-hover">
                         Quick Contact
                       </div>
-                      <div className="mt-2 text-[1.35rem] font-semibold tracking-[-0.03em] text-[#24443a]">
+                      <div className="mt-2 text-[1.35rem] font-semibold tracking-[-0.03em] text-secondary-light">
                         Start with what feels easiest
                       </div>
                     </div>
 
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#edf8f2] text-[#03966a]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#edf8f2] text-primary-hover">
                       <svg
                         className="h-5 w-5"
                         fill="none"
@@ -193,30 +193,30 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
 
                   <div className="space-y-4">
                     <div className="rounded-[24px] border border-[#d9e8e0] bg-white/80 p-4 shadow-[0_10px_22px_rgba(20,40,34,0.04)]">
-                      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6d877d]">
+                      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary-hover">
                         Phone
                       </div>
                       <a
                         href={`tel:${data.phone}`}
-                        className="mt-2 block text-[1.05rem] font-semibold text-[#24443a] transition-colors duration-300 hover:text-[#03966a]"
+                        className="mt-2 block text-[1.05rem] font-semibold text-secondary transition-colors duration-300 hover:text-primary"
                       >
                         {data.phone}
                       </a>
                     </div>
 
                     <div className="rounded-[24px] border border-[#d9e8e0] bg-white/80 p-4 shadow-[0_10px_22px_rgba(20,40,34,0.04)]">
-                      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6d877d]">
+                      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary-hover">
                         Email
                       </div>
                       <a
                         href={`mailto:${data.email}`}
-                        className="mt-2 block break-all text-[1.05rem] font-semibold text-[#24443a] transition-colors duration-300 hover:text-[#03966a]"
+                        className="mt-2 block break-all text-[1.05rem] font-semibold text-secondary transition-colors duration-300 hover:text-primary-hover"
                       >
                         {data.email}
                       </a>
                     </div>
 
-                    <div className="rounded-[24px] border border-[#d9e8e0] bg-[#24443a] p-4 text-white shadow-[0_14px_30px_rgba(20,40,34,0.10)]">
+                    <div className="rounded-[24px] border border-[#d9e8e0] bg-secondary-light p-4 text-white shadow-[0_14px_30px_rgba(20,40,34,0.10)]">
                       <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/68">
                         Visit Window
                       </div>
@@ -239,14 +239,14 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
                   <div className="mt-6 flex flex-col gap-4 sm:flex-row">
                     <Link
                       href={`tel:${data.phone}`}
-                      className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-[22px] bg-[#5aa876] px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#4a9766]"
+                      className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover"
                     >
                       Call Clinic
                     </Link>
 
                     <a
                       href={`mailto:${data.email}`}
-                      className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-[22px] border border-[#cfdfd6] bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-[#314d44] shadow-[0_10px_24px_rgba(20,40,34,0.05)] transition-all duration-300 hover:-translate-y-1"
+                      className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-[22px] border border-[#cfdfd6] bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-primary-hover shadow-[0_10px_24px_rgba(20,40,34,0.05)] transition-all duration-300 hover:-translate-y-1"
                     >
                       Write Email
                     </a>
@@ -269,10 +269,10 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
           >
             <div className="overflow-hidden rounded-[34px] border border-[#dcebe3] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(244,250,246,0.98))] shadow-[0_24px_60px_rgba(20,40,34,0.05)]">
               <div className="border-b border-[#dcebe3] px-6 py-6 sm:px-8">
-                <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                   Contact Details
                 </div>
-                <h2 className="mt-3 text-[clamp(1.9rem,3vw,2.8rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[#24443a]">
+                <h2 className="mt-3 text-[clamp(1.9rem,3vw,2.8rem)] font-bold leading-[0.95] tracking-[-0.04em] text-secondary">
                   Visit, call, or write to us
                 </h2>
               </div>
@@ -280,14 +280,14 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
               <div className="space-y-6 px-6 py-7 sm:px-8 sm:py-8">
                 <div className="rounded-[26px] border border-[#d9e8e0] bg-white/78 p-5 shadow-[0_14px_28px_rgba(20,40,34,0.04)]">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#edf8f2] text-[#03966a]">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#edf8f2] text-primary-hover">
                       <DetailIcon type="location" />
                     </div>
                     <div>
-                      <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                      <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                         Address
                       </div>
-                      <div className="mt-3 space-y-1 text-[1rem] leading-7 text-[#3f5b51]">
+                      <div className="mt-3 space-y-1 text-[1rem] leading-7 text-secondary">
                         {data.addressLines.map((line) => (
                           <div key={line}>{line}</div>
                         ))}
@@ -298,16 +298,16 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
 
                 <div className="rounded-[26px] border border-[#d9e8e0] bg-white/78 p-5 shadow-[0_14px_28px_rgba(20,40,34,0.04)]">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#edf8f2] text-[#03966a]">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#edf8f2] text-primary-hover">
                       <DetailIcon type="phone" />
                     </div>
                     <div>
-                      <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                      <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                         Phone
                       </div>
                       <a
                         href={`tel:${data.phone}`}
-                        className="mt-3 inline-block text-[1.05rem] font-semibold text-[#24443a] transition-colors duration-300 hover:text-[#03966a]"
+                        className="mt-3 inline-block text-[1.05rem] font-semibold text-secondary transition-colors duration-300 hover:text-primary"
                       >
                         {data.phone}
                       </a>
@@ -317,16 +317,16 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
 
                 <div className="rounded-[26px] border border-[#d9e8e0] bg-white/78 p-5 shadow-[0_14px_28px_rgba(20,40,34,0.04)]">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#edf8f2] text-[#03966a]">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#edf8f2] text-primary-hover">
                       <DetailIcon type="email" />
                     </div>
                     <div>
-                      <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                      <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                         Email
                       </div>
                       <a
                         href={`mailto:${data.email}`}
-                        className="mt-3 inline-block break-all text-[1.05rem] font-semibold text-[#24443a] transition-colors duration-300 hover:text-[#03966a]"
+                        className="mt-3 inline-block break-all text-[1.05rem] font-semibold text-secondary transition-colors duration-300 hover:text-primary"
                       >
                         {data.email}
                       </a>
@@ -335,14 +335,14 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
                 </div>
 
                 <div className="rounded-[26px] border border-[#d9e8e0] bg-white/78 p-5 shadow-[0_14px_28px_rgba(20,40,34,0.04)]">
-                  <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                  <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-secondary">
                     Appointment Focus
                   </div>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {data.quickHighlights.map((item) => (
                       <span
                         key={item}
-                        className="rounded-full border border-[#d7e7de] bg-[#f8fcfa] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#2f6e5b]"
+                        className="rounded-full border border-[#d7e7de] bg-[#f8fcfa] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-hover"
                       >
                         {item}
                       </span>
@@ -363,15 +363,15 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
             <div className="overflow-hidden rounded-[34px] border border-[#dcebe3] bg-white shadow-[0_24px_60px_rgba(20,40,34,0.05)]">
               <div className="flex flex-col gap-4 border-b border-[#dcebe3] px-6 py-6 sm:flex-row sm:items-end sm:justify-between sm:px-8">
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#6d877d]">
+                  <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary-hover">
                     Clinic Map
                   </div>
-                  <h2 className="mt-3 text-[clamp(1.9rem,3vw,2.8rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[#24443a]">
+                  <h2 className="mt-3 text-[clamp(1.9rem,3vw,2.8rem)] font-bold leading-[0.95] tracking-[-0.04em] text-secondary">
                     Find us with ease
                   </h2>
                 </div>
 
-                <p className="max-w-md text-sm leading-6 text-[#5b756b]">
+                <p className="max-w-md text-sm leading-6 text-primary-hover">
                   Use the live map for directions before your visit to Sarangi
                   Dentistry.
                 </p>

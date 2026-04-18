@@ -194,10 +194,10 @@ export default function HomeAbout() {
                 }}
                 className="absolute -bottom-5 -right-1 rounded-[26px] border border-[#dcebe3] bg-white/30 px-5 py-4 shadow-[0_18px_38px_rgba(20,40,34,0.12)] backdrop-blur md:-right-2.5 lg:-right-4 lg:px-5 lg:py-4"
               >
-                <div className="text-4xl font-black tracking-[-0.04em] text-[#03966a] lg:text-5xl">
-                  36<span className="text-[#9bb6aa]">+</span>
+                <div className="text-4xl font-black tracking-[-0.04em] lg:text-5xl ">
+                  36<span>+</span>
                 </div>
-                <p className="mt-2 max-w-42.5 text-[11px] font-bold uppercase tracking-[0.22em] leading-5 text-[#9bb6aa]">
+                <p className="mt-2 max-w-42.5 text-[11px] font-bold uppercase tracking-[0.22em] leading-5">
                   Years Experience Overall
                 </p>
               </motion.div>
@@ -232,16 +232,16 @@ export default function HomeAbout() {
           </motion.div>
 
           <SectionReveal>
-            <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-[#d6e8de] bg-white/75 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#2f6b58] backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-[#03966a]" />
+            <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-[#d6e8de] bg-white/75 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-secondary backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-primary" />
               About
             </div>
 
-            <h2 className="text-[clamp(2.5rem,4.5vw,4.3rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[#24443a]">
+            <h2 className="text-[clamp(2.5rem,4.5vw,4.3rem)] font-bold leading-[0.95] tracking-[-0.04em] text-secondary">
               Dr. Soumendra Sarangi
             </h2>
 
-            <div className="mt-5 space-y-5 text-[1rem] leading-8 text-[#4d6a61] sm:text-[1.02rem]">
+            <div className="mt-5 space-y-5 text-[1rem] leading-8 text-secondary-light sm:text-[1.02rem]">
               <p>
                 After his graduation from Dental Wing of S.C.B Medical College,
                 Cuttack in year 1988, Dr. Sarangi completed his internship from
@@ -259,7 +259,7 @@ export default function HomeAbout() {
             <div className="mt-8">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-3 rounded-[22px] bg-[#03966a] px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_36px_rgba(3,150,106,0.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#027e59]"
+                className="inline-flex items-center gap-3 rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_36px_rgba(3,150,106,0.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover"
               >
                 Know More
                 <svg

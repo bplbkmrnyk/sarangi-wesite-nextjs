@@ -129,7 +129,7 @@ export default function ServicesShowcaseSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#a4e0da] py-16 sm:py-20 lg:py-28"
+      className="relative overflow-hidden bg-accent-soft py-16 sm:py-20 lg:py-28"
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-size-[42px_42px] opacity-[0.14]" />
@@ -176,30 +176,30 @@ export default function ServicesShowcaseSection() {
               transition={{ duration: 0.65 }}
               className="relative z-10 flex flex-col items-center xl:items-start"
             >
-              <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-white/60 bg-white/60 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#21584d] backdrop-blur">
-                <span className="h-2 w-2 rounded-full bg-[#2b9a86]" />
+              <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-white/60 bg-white/60 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-primary backdrop-blur">
+                <span className="h-2 w-2 rounded-full bg-primary" />
                 Services
               </div>
 
-              <h2 className="max-w-[10.5ch] text-[clamp(2.5rem,5vw,4.8rem)] font-bold leading-[0.9] tracking-[-0.04em] text-[#173f38]">
+              <h2 className="max-w-[10.5ch] text-[clamp(2.5rem,5vw,4.8rem)] font-bold leading-[0.9] tracking-[-0.04em] text-secondary">
                 Modern Dental
                 <br />
                 Therapy
               </h2>
 
-              <p className="mt-5 max-w-lg text-[1rem] leading-8 text-[#244d46] sm:text-lg">
+              <p className="mt-5 max-w-lg text-[1rem] leading-8 text-secondary-light sm:text-lg">
                 Experience refined dental care where advanced technology,
                 clinical precision, and patient comfort work together to create
                 healthier, more confident smiles.
               </p>
 
-              <p className="mt-4 max-w-lg text-[0.96rem] leading-8 text-[#2e5b54] sm:text-lg">
+              <p className="mt-4 max-w-lg text-[0.96rem] leading-8 text-secondary-light sm:text-lg">
                 From preventive maintenance to aesthetic smile enhancement and
                 restorative procedures, our service line is designed to feel as
                 premium as it is effective.
               </p>
 
-              <p className="mt-4 max-w-lg text-[0.96rem] leading-8 text-[#2e5b54] sm:text-lg">
+              <p className="mt-4 max-w-lg text-[0.96rem] leading-8 text-secondary-light sm:text-lg">
                 Sarangi Dentistry combines modern treatment planning with a
                 calm, premium experience so every visit feels reassuring,
                 precise, and patient-first.
@@ -220,7 +220,7 @@ export default function ServicesShowcaseSection() {
                   { value: 8, suffix: "+", label: "Key Services" },
                 ].map((item) => (
                   <div key={item.label}>
-                    <div className="text-3xl font-black tracking-[-0.04em] text-[#173f38]">
+                    <div className="text-3xl font-black tracking-[-0.04em] text-secondary">
                       <CountUp
                         start={0}
                         end={item.value}
@@ -231,7 +231,7 @@ export default function ServicesShowcaseSection() {
                       />
                       {item.suffix}
                     </div>
-                    <div className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-[#3c6a62]">
+                    <div className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-secondary-light">
                       {item.label}
                     </div>
                   </div>
@@ -253,7 +253,7 @@ export default function ServicesShowcaseSection() {
                   : { scale: [1, 1.05, 1], y: ["-50%", "-47%", "-50%"] }
               }
               transition={{
-                duration: 10,
+                duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -324,12 +324,12 @@ export default function ServicesShowcaseSection() {
                       <div className="relative z-10 flex h-full flex-col p-5 sm:p-6 md:p-8">
                         <div className="flex items-start justify-between">
                           <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#cfe5dd] bg-white/80 shadow-[0_10px_24px_rgba(20,40,34,0.06)] sm:h-14 sm:w-14">
-                            <span className="text-base font-black tracking-[-0.03em] text-[#1d4a43] sm:text-lg">
+                            <span className="text-base font-black tracking-[-0.03em] text-secondary sm:text-lg">
                               {service.id < 10 ? `0${service.id}` : service.id}
                             </span>
                           </div>
 
-                          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#cfe5dd] bg-white/55 text-[#4d7a72]">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#cfe5dd] bg-white/55 text-primary">
                             <svg
                               className="h-4 w-4"
                               fill="none"
@@ -347,20 +347,20 @@ export default function ServicesShowcaseSection() {
                         </div>
 
                         <div className="mt-6 sm:mt-8">
-                          <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#4e7b72] sm:text-[11px]">
+                          <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary-hover sm:text-[11px]">
                             Premium Service
                           </div>
-                          <h3 className="text-[2rem] font-black leading-none tracking-[-0.03em] text-[#173f38] sm:text-3xl">
+                          <h3 className="text-[2rem] font-black leading-none tracking-[-0.03em] text-secondary sm:text-3xl">
                             {service.title}
                           </h3>
-                          <p className="mt-4 border-b border-[#d5e9e1] pb-4 text-[14px] leading-7 text-[#42675f] sm:pb-5 sm:text-[15px]">
+                          <p className="mt-4 border-b border-[#d5e9e1] pb-4 text-[14px] leading-7 text-secondary-light sm:pb-5 sm:text-[15px]">
                             {service.desc}
                           </p>
                         </div>
 
                         {isTop ? (
                           <div className="mt-auto pt-4 sm:pt-5">
-                            <div className="flex items-center justify-center gap-2 rounded-2xl border border-[#c8e3da] bg-white/82 px-3 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#3f6f66] shadow-[0_10px_24px_rgba(20,40,34,0.05)] sm:gap-3 sm:text-[11px]">
+                            <div className="flex items-center justify-center gap-2 rounded-2xl border border-[#c8e3da] bg-white/82 px-3 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-primary-hover shadow-[0_10px_24px_rgba(20,40,34,0.05)] sm:gap-3 sm:text-[11px]">
                               <svg
                                 className="h-4 w-4 rotate-180"
                                 fill="none"
