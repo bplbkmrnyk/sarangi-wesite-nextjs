@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { ProcedureItem } from "@/types/procedure";
+import PageBackground from "@/components/ui/PageBackground";
 
 type ProcedureDetailPageClientProps = {
   procedure: ProcedureItem;
@@ -24,16 +25,9 @@ export default function ProcedureDetailPageClient({
   );
 
   return (
-    <main className="min-h-screen overflow-x-clip bg-[#f6fbf8] pt-12 md:pt-24 text-secondary">
-      <section className="relative min-h-screen border-b border-[#dcebe3] bg-[linear-gradient(180deg,rgba(246,251,248,1),rgba(238,248,243,0.97))]">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[8%] top-[16%] h-44 w-44 rounded-full bg-accent-soft/40 blur-3xl" />
-          <div className="absolute right-[10%] top-[10%] h-60 w-60 rounded-full bg-accent-soft/40 blur-3xl" />
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.045]"
-            style={{ backgroundImage: "url('/assets/sketch_it_sarangi.png')" }}
-          />
-        </div>
+    <main className="min-h-screen overflow-x-clip bg-background text-secondary">
+      <section className="relative min-h-screen pt-18">
+        <PageBackground />
 
         <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 md:px-10 lg:px-16 lg:pb-20">
           <nav className="mb-8 flex flex-wrap items-center gap-2 text-sm font-medium text-secondary">
@@ -96,7 +90,7 @@ export default function ProcedureDetailPageClient({
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Link
-                  href="/contact"
+                  href="/book-appointment"
                   className="inline-flex min-h-14 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover"
                 >
                   Book Appointment
@@ -206,11 +200,10 @@ export default function ProcedureDetailPageClient({
                       </span>
 
                       <span
-                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
-                          isOpen
-                            ? "border-[#03966a] bg-primary text-white rotate-180"
-                            : "border-[#d6e7de] bg-background text-[#03966a]"
-                        }`}
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${isOpen
+                          ? "border-[#03966a] bg-primary text-white rotate-180"
+                          : "border-[#d6e7de] bg-background text-[#03966a]"
+                          }`}
                       >
                         <svg
                           className="h-5 w-5"

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useReducedMotion, type Transition } from "framer-motion";
 import type { BlogPost } from "@/types/blog";
+import PageBackground from "@/components/ui/PageBackground";
 
 type BlogPostPageClientProps = {
   blog: BlogPost;
@@ -79,11 +80,9 @@ export default function BlogPostPageClient({
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <main className="min-h-screen overflow-x-clip bg-[#f7fbf9] pt-28 text-[#24443a]">
-      <section className="relative overflow-hidden border-b border-[#dcebe3] bg-[linear-gradient(180deg,rgba(249,253,251,1),rgba(239,248,243,0.96))]">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(3,150,106,0.12),transparent_22%),radial-gradient(circle_at_82%_18%,rgba(36,68,58,0.06),transparent_24%)]" />
-        </div>
+    <main className="min-h-screen overflow-x-clip bg-background pt-28 text-[#24443a]">
+      <section className="relative">
+        <PageBackground />
 
         <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-8 sm:px-6 md:px-10 lg:px-16">
           <nav className="mb-8 flex flex-wrap items-center gap-2 text-sm font-medium text-[#5a746a]">

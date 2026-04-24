@@ -9,6 +9,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import PageBackground from "@/components/ui/PageBackground";
 
 const WHY_US_ITEMS = [
   {
@@ -151,9 +152,10 @@ export default function AboutPageClient() {
   );
 
   return (
-    <main className="min-h-screen bg-background text-secondary">
-      <section ref={sceneRef} className="relative h-[220vh]">
-        <div className="sticky top-0 h-screen overflow-hidden">
+    <main className="min-h-screen overflow-x-clip bg-background text-secondary">
+      <section ref={sceneRef} className="relative w-full">
+        {/* Sticky background layer */}
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <motion.div
               style={{ scale: heroScale }}
@@ -194,31 +196,19 @@ export default function AboutPageClient() {
             <span>Scroll to reveal</span>
             <div className="mt-3 h-16 w-px bg-linear-to-b from-[#f5f9eb] via-white/70 to-transparent" />
           </motion.div>
+        </div>
 
+        {/* Natural scrolling content layer (fixes the viewport cut-off issue) */}
+        <div className="relative z-20 w-full pt-[100vh] -mt-[100vh]">
           <motion.div
             style={{
-              y: aboutY,
               scale: aboutScale,
               borderTopLeftRadius: aboutRadius,
               borderTopRightRadius: aboutRadius,
-              left: aboutInset,
-              right: aboutInset,
             }}
-            className="absolute inset-x-0 top-0 z-20 min-h-screen origin-top overflow-hidden bg-background will-change-transform"
+            className="relative w-full origin-top bg-background will-change-transform"
           >
-            <div className="pointer-events-none absolute inset-0">
-              <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.08]"
-                style={{
-                  backgroundImage: "url('/assets/sketch_it_sarangi.png')",
-                }}
-              />
-              <div className="absolute inset-0 bg-background" />
-
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(var(--accent-soft-rgb),0.3),transparent_32%),radial-gradient(circle_at_86%_18%,rgba(var(--accent-soft-rgb),0.10),transparent_30%),radial-gradient(circle_at_50%_82%,rgba(36,68,58,0.05),transparent_34%)]" />
-
-              <div className="absolute inset-0 bg-linear-to-b from-[rgba(255,255,255,0.22)] via-[rgba(248,255,250,0.12)] to-[rgba(248,255,250,0.32)]" />
-            </div>
+            <PageBackground />
 
             <motion.div
               style={{ y: floatYOne }}
@@ -275,7 +265,7 @@ export default function AboutPageClient() {
 
                     <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                       <Link
-                        href="/contact"
+                        href="/book-appointment"
                         className="inline-flex min-h-13.5 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover"
                       >
                         Book Appointment
@@ -515,7 +505,7 @@ export default function AboutPageClient() {
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                   <Link
-                    href="/contact"
+                    href="/book-appointment"
                     className="inline-flex min-h-14 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover"
                   >
                     Schedule a Visit

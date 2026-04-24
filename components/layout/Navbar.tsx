@@ -288,72 +288,65 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <>
+            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.28 }}
-              className="fixed inset-0 z-40 bg-[rgba(7,22,16,0.38)] backdrop-blur-md md:hidden"
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-40 bg-secondary/20 backdrop-blur-sm md:hidden"
               onClick={() => setIsOpen(false)}
             />
 
+            {/* Side Panel */}
             <motion.div
-              initial={{ x: "-100%", opacity: 0.85 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: "-100%", opacity: 0.9 }}
-              transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-y-0 left-0 z-50 h-dvh w-[86%] max-w-sm border-r border-white/20 bg-[linear-gradient(180deg,rgba(45,76,62,0.92),rgba(29,50,41,0.96))] shadow-[0_24px_80px_rgba(5,18,13,0.38)] backdrop-blur-2xl md:hidden"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed inset-y-0 right-0 z-50 flex h-dvh w-[90%] max-w-sm flex-col bg-white/95 shadow-[-24px_0_80px_rgba(20,40,34,0.08)] backdrop-blur-3xl md:hidden"
             >
-              <div className="flex h-full flex-col overflow-y-auto px-5 pb-6 pt-5">
-                <div className="mb-6 flex items-center justify-between rounded-[28px] border border-white/10 bg-white/8 px-4 py-4 backdrop-blur-md">
-                  <div>
-                    <div className="text-[1.5rem] font-bold tracking-tight text-white">
-                      Sarangi <span className="text-[#8be0b6]">Dentistry</span>
-                    </div>
-                    <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.22em] text-[#d8eee3]/75">
-                      Premium Dental Care
-                    </div>
+              <div className="flex h-full flex-col overflow-y-auto px-6 pb-8 pt-6">
+                {/* Header */}
+                <div className="mb-8 flex items-center justify-between">
+                  <div className="text-[1.35rem] font-bold tracking-tight text-secondary">
+                    Sarangi <span className="text-primary">Dentistry</span>
                   </div>
 
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-colors duration-300 hover:bg-white/16"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-[#dcebe3] bg-background text-secondary transition-colors duration-300 hover:bg-[#d0e5d9]"
                     aria-label="Close menu"
                     type="button"
                   >
-                    <svg
-                      className="h-5 w-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
 
-                <div className="rounded-[30px] border border-white/10 bg-white/6 p-3 backdrop-blur-md">
-                  {navItems.map((item) => {
+                {/* Links */}
+                <div className="flex flex-col gap-2">
+                  {navItems.map((item, i) => {
                     const active = isItemActive(pathname, item.path);
 
                     return (
-                      <div
+                      <motion.div
                         key={item.name}
-                        className="overflow-hidden rounded-[22px]"
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }}
+                        transition={{ delay: 0.1 + i * 0.05, duration: 0.3 }}
+                        className="flex flex-col"
                       >
                         <div className="flex items-center justify-between">
                           <Link
                             href={item.path}
                             onClick={() => setIsOpen(false)}
-                            className={`grow rounded-[18px] px-4 py-4 font-mono text-[1.05rem] font-semibold transition-all duration-300 ${
+                            className={`flex-grow rounded-2xl px-5 py-4 font-mono text-[1.1rem] font-semibold transition-all duration-300 ${
                               active
-                                ? "bg-[#e8f7ee] text-[#03966a]"
-                                : "text-[#eef8f1] hover:bg-white/8"
+                                ? "bg-primary/10 text-primary"
+                                : "text-secondary hover:bg-accent-soft"
                             }`}
                           >
                             {item.name}
@@ -361,32 +354,20 @@ export default function Navbar() {
 
                           {item.hasDropdown && (
                             <button
-                              onClick={() =>
-                                setIsMobileProcedureOpen((prev) => !prev)
-                              }
-                              className={`ml-2 flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-300 ${
+                              onClick={() => setIsMobileProcedureOpen((prev) => !prev)}
+                              className={`ml-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
                                 isMobileProcedureOpen
-                                  ? "bg-white/16 text-[#8be0b6]"
-                                  : "text-[#eef8f1] hover:bg-white/10"
+                                  ? "bg-primary text-white shadow-md shadow-primary/20"
+                                  : "bg-accent-soft text-secondary hover:bg-[#d0e5d9]"
                               }`}
                               type="button"
                               aria-label="Toggle procedure menu"
-                              aria-expanded={isMobileProcedureOpen}
                             >
                               <svg
-                                className={`h-5 w-5 transition-transform duration-300 ${
-                                  isMobileProcedureOpen ? "rotate-180" : ""
-                                }`}
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
+                                className={`h-5 w-5 transition-transform duration-300 ${isMobileProcedureOpen ? "rotate-180" : ""}`}
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
                               >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2.2}
-                                  d="M19 9l-7 7-7-7"
-                                />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M19 9l-7 7-7-7" />
                               </svg>
                             </button>
                           )}
@@ -398,28 +379,26 @@ export default function Navbar() {
                               initial={{ height: 0, opacity: 0 }}
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.28 }}
+                              transition={{ duration: 0.3, ease: "easeInOut" }}
                               className="overflow-hidden"
                             >
-                              <div className="mt-2 space-y-2 rounded-[20px] bg-white/6 p-3">
+                              <div className="mt-2 flex flex-col space-y-1 rounded-[24px] bg-accent-soft p-3">
                                 {proceduresData.map((proc) => {
-                                  const procedureActive =
-                                    pathname === proc.path ||
-                                    pathname.startsWith(`${proc.path}/`);
+                                  const procedureActive = pathname === proc.path || pathname.startsWith(`${proc.path}/`);
 
                                   return (
                                     <Link
                                       key={proc.id}
                                       href={proc.path}
                                       onClick={() => setIsOpen(false)}
-                                      className={`flex items-center justify-between rounded-2xl px-4 py-3 text-[0.98rem] font-medium transition-all duration-300 ${
+                                      className={`flex items-center justify-between rounded-[16px] px-4 py-3.5 text-[0.95rem] font-medium transition-all duration-300 ${
                                         procedureActive
-                                          ? "bg-[#e8f7ee] text-[#03966a]"
-                                          : "text-[#d8eee3] hover:bg-white/8 hover:text-white"
+                                          ? "bg-white text-primary shadow-sm"
+                                          : "text-secondary hover:bg-white/50"
                                       }`}
                                     >
                                       <span>{proc.title}</span>
-                                      <span className="text-sm">→</span>
+                                      <span className="text-lg opacity-50">→</span>
                                     </Link>
                                   );
                                 })}
@@ -427,23 +406,30 @@ export default function Navbar() {
                             </motion.div>
                           )}
                         </AnimatePresence>
-                      </div>
+                      </motion.div>
                     );
                   })}
                 </div>
 
-                <div className="mt-6">
+                {/* Bottom CTA */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ delay: 0.3, duration: 0.4 }}
+                  className="mt-auto pt-10"
+                >
                   <Link
                     href="/book-appointment"
                     onClick={() => setIsOpen(false)}
-                    className="group relative flex min-h-14 w-full items-center justify-center overflow-hidden rounded-full bg-[#03966a] px-6 py-4 text-center font-mono font-bold uppercase tracking-[0.18em] text-white shadow-[0_18px_40px_rgba(3,150,106,0.24)] transition-all duration-300"
+                    className="group relative flex min-h-14 w-full items-center justify-center overflow-hidden rounded-[20px] bg-primary px-6 py-4 text-center font-mono text-[13px] font-bold uppercase tracking-[0.2em] text-white shadow-[0_16px_40px_rgba(3,150,106,0.24)] transition-all duration-300 hover:-translate-y-1"
                   >
-                    <div className="absolute -inset-4 z-0 skew-x-12 translate-x-[-120%] bg-[#00ebb0] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:translate-x-0" />
-                    <span className="relative z-10 transition-colors duration-500 group-hover:text-[#17332b]">
+                    <div className="absolute -inset-4 z-0 skew-x-12 translate-x-[-120%] bg-primary-hover transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:translate-x-0" />
+                    <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
                       Book Appointment
                     </span>
                   </Link>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           </>

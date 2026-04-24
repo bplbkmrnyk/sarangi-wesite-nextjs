@@ -123,6 +123,7 @@ export default function HomeAbout() {
   return (
     <section
       ref={sectionRef}
+      style={{ position: "relative" }}
       className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
     >
       {/* ✅ NEW HERO-LIKE BACKGROUND */}

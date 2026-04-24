@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import PageBackground from "@/components/ui/PageBackground";
 import {
   motion,
   useReducedMotion,
@@ -91,22 +92,8 @@ export default function ContactPageClient({ data }: ContactPageClientProps) {
 
   return (
     <main className="min-h-screen overflow-x-clip   text-secondary">
-      <section className="relative overflow-hidden pt-20">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[-4rem] top-[-2rem] h-72 w-72 rounded-full bg-accent-soft/30 blur-3xl" />
-          <div className="absolute right-[-5rem] top-[10%] h-80 w-80 rounded-full bg-accent-soft/30 blur-3xl" />
-          
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(3,150,106,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(3,150,106,0.025)_1px,transparent_1px)] bg-[size:96px_96px] opacity-30" />
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: "url('/assets/sketch_it_sarangi.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
-        </div>
+      <section className="relative pt-20">
+        <PageBackground />
 
         <div className="relative mx-auto max-w-7xl px-5 pb-14 pt-8 sm:px-6 md:px-10 md:pb-18 lg:px-16 lg:pb-20">
           <motion.div

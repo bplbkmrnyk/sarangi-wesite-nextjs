@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { proceduresData } from "@/data/procedures";
 
 type QuickLink = {
@@ -16,12 +19,51 @@ const quickLinks: QuickLink[] = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 w-full overflow-hidden border-t border-[#c0d2d8] bg-[#03966a] pt-16 pb-8 text-[#f5f9eb]">
+    <footer className="relative z-10 w-full overflow-hidden border-t border-[#c0d2d8] bg-accent-soft pt-16 pb-8 text-secondary">
+      {/* Animated Background Accents */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute -bottom-40 right-20 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[120px]" />
+        <div className="absolute -left-20 top-10 h-[400px] w-[400px] rounded-full bg-white/40 blur-[100px]" />
+
+        {/* Floating Logo Accent */}
+        <motion.div
+          animate={{ y: [0, -15, 0], rotate: [0, 2, -2, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -right-24 bottom-10 h-80 w-80 opacity-[0.06] blur-[0.5px] sm:h-96 sm:w-96 md:-right-10 md:bottom-0 md:h-[450px] md:w-[450px]"
+        >
+          <img src="/assets/sd_teeth.png" alt="" className="h-full w-full object-contain" />
+        </motion.div>
+
+        {/* Thin Animated Circles */}
+        <motion.svg
+          animate={{ rotate: 360 }}
+          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          className="absolute -left-32 top-20 h-[400px] w-[400px] opacity-[0.15] md:-left-20 md:-top-10 md:h-[600px] md:w-[600px]"
+          viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="50" cy="50" r="45" stroke="#03966a" strokeWidth="0.5" strokeDasharray="4 4" />
+          <circle cx="50" cy="50" r="35" stroke="#03966a" strokeWidth="0.2" />
+        </motion.svg>
+
+        <motion.svg
+          animate={{ rotate: -360, scale: [1, 1.05, 1] }}
+          transition={{
+            rotate: { duration: 50, repeat: Infinity, ease: "linear" },
+            scale: { duration: 10, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute -bottom-40 left-1/3 h-[300px] w-[300px] opacity-[0.2]"
+          viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="50" cy="50" r="48" stroke="white" strokeWidth="0.5" strokeDasharray="1 6" />
+          <circle cx="50" cy="50" r="30" stroke="white" strokeWidth="0.3" />
+        </motion.svg>
+      </div>
+
       <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div className="flex flex-col">
-            <Link href="/" className="mb-6 text-3xl font-bold tracking-tight">
-              Sarangi <span className="text-[#80c8e5]">Dentistry</span>
+            <Link href="/" className="mb-6 text-3xl font-bold tracking-tight text-white">
+              Sarangi <span className="text-secondary">Dentistry</span>
             </Link>
 
             <p className="mb-6 leading-relaxed">
@@ -32,7 +74,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#393e40] transition-colors duration-300 hover:bg-[#80c8e5] hover:text-[#022431]"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white transition-colors duration-300 hover:bg-[#80c8e5] hover:text-[#022431]"
                 aria-label="Facebook"
               >
                 <svg
@@ -51,7 +93,7 @@ export default function Footer() {
 
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#393e40] transition-colors duration-300 hover:bg-[#80c8e5] hover:text-[#022431]"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white transition-colors duration-300 hover:bg-[#80c8e5] hover:text-[#022431]"
                 aria-label="Instagram"
               >
                 <svg
@@ -71,7 +113,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col">
-            <h3 className="mb-6 text-xl font-semibold text-[#f5f9eb]">
+            <h3 className="mb-6 text-xl font-semibold">
               Explore
             </h3>
 
@@ -80,9 +122,9 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.path}
-                    className="group flex items-center transition-colors duration-300 hover:text-[#80c8e5]"
+                    className="group flex items-center transition-colors duration-300 hover:text-secondary-light"
                   >
-                    <span className="mr-0 h-0.5 w-0 bg-[#80c8e5] transition-all duration-300 ease-out group-hover:mr-2 group-hover:w-2" />
+                    <span className="mr-0 h-0.5 w-0 bg-secondary-light transition-all duration-300 ease-out group-hover:mr-2 group-hover:w-2" />
                     {link.name}
                   </Link>
                 </li>
@@ -91,7 +133,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col">
-            <h3 className="mb-6 text-xl font-semibold text-[#f5f9eb]">
+            <h3 className="mb-6 text-xl font-semibold">
               Procedures
             </h3>
 
@@ -100,9 +142,9 @@ export default function Footer() {
                 <li key={proc.id}>
                   <Link
                     href={proc.path}
-                    className="group flex items-center transition-colors duration-300 hover:text-[#80c8e5]"
+                    className="group flex items-center transition-colors duration-300 hover:text-secondary-light"
                   >
-                    <span className="mr-0 h-0.5 w-0 bg-[#80c8e5] transition-all duration-300 ease-out group-hover:mr-2 group-hover:w-2" />
+                    <span className="mr-0 h-0.5 w-0 bg-secondary-light transition-all duration-300 ease-out group-hover:mr-2 group-hover:w-2" />
                     {proc.title}
                   </Link>
                 </li>
@@ -111,7 +153,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col">
-            <h3 className="mb-6 text-xl font-semibold text-[#f5f9eb]">
+            <h3 className="mb-6 text-xl font-semibold ">
               Contact Us
             </h3>
 
@@ -161,7 +203,7 @@ export default function Footer() {
 
                 <a
                   href="mailto:info@sarangidentistry.com"
-                  className="break-all transition-colors duration-300 hover:text-[#80c8e5]"
+                  className="break-all transition-colors duration-300 hover:text-secondary-light"
                 >
                   info@sarangidentistry.com
                 </a>
@@ -184,7 +226,7 @@ export default function Footer() {
 
                 <a
                   href="tel:+919938942846"
-                  className="transition-colors duration-300 hover:text-[#80c8e5]"
+                  className="transition-colors duration-300 hover:text-secondary-light"
                 >
                   +91 9938942846
                 </a>
@@ -193,22 +235,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-[#c0d2d8] pt-8 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-secondary pt-8 md:flex-row">
           <p className="text-sm">
             &copy; {new Date().getFullYear()} Sarangi Dentistry. All rights
             reserved.
           </p>
 
-          <div className="flex space-x-6 text-sm text-[#81a4b1]">
+          <div className="flex space-x-6 text-sm">
             <Link
               href="#"
-              className="transition-colors duration-300 hover:text-[#f5f9eb]"
+              className="transition-colors duration-300 hover:text-secondary-light"
             >
               Privacy Policy
             </Link>
             <Link
               href="#"
-              className="transition-colors duration-300 hover:text-[#f5f9eb]"
+              className="transition-colors duration-300 hover:text-secondary-light"
             >
               Terms of Service
             </Link>

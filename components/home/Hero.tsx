@@ -10,6 +10,7 @@ import {
   type Transition,
 } from "framer-motion";
 import Link from "next/link";
+import PageBackground from "@/components/ui/PageBackground";
 
 type HeroPair = {
   head: string;
@@ -166,26 +167,14 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
+      style={{ position: "relative" }}
       className="relative min-h-screen isolate overflow-hidden border-b border-[#dbe9e1] bg-background"
     >
       <motion.div
         style={{ opacity: bgOpacity }}
         className="pointer-events-none absolute inset-0"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/assets/sketch_it_sarangi.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-          }}
-        />
-
-        <div className="absolute inset-0 bg-[rgba(236,247,241,0.62)]" />
-
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(var(--accent-soft-rgb),0.3),transparent_30%),radial-gradient(circle_at_80%_30%,rgba(var(--accent-soft-rgb),0.12),transparent_28%),radial-gradient(circle_at_50%_75%,rgba(36,68,58,0.04),transparent_32%)]" />
-
-        <div className="absolute inset-0 bg-linear-to-b from-[rgba(255,255,255,0.18)] via-[rgba(248,255,250,0.10)] to-[rgba(248,255,250,0.26)]" />
+        <PageBackground withSketch />
       </motion.div>
 
       <div className="relative mx-auto grid min-h-svh max-w-7xl grid-cols-1 gap-10 px-4 pb-12 pt-28 sm:min-h-[92svh] sm:px-6 sm:pb-14 sm:pt-32 md:gap-12 md:px-10 md:pb-16 md:pt-32 lg:grid-cols-12 lg:items-start lg:gap-12 lg:px-16 lg:pb-16 lg:pt-28">
@@ -222,7 +211,7 @@ export default function Hero() {
 
             <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:flex-row sm:items-center sm:justify-center">
               <Link
-                href="/contact"
+                href="/book-appointment"
                 className="hidden min-h-14 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(62,161,111,0.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover md:inline-flex sm:tracking-[0.24em]"
               >
                 Book Appointment

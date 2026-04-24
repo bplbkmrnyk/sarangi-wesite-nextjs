@@ -3,6 +3,7 @@
 import { motion, useReducedMotion, type Transition } from "framer-motion";
 import type { CertificationItem } from "@/types/certification";
 import CertificationShowcase from "@/components/certification/CertificationShowcase";
+import PageBackground from "@/components/ui/PageBackground";
 
 type CertificationPageClientProps = {
   items: CertificationItem[];
@@ -18,13 +19,9 @@ export default function CertificationPageClient({
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <main className="Soverflow-x-clip bg-background text-secondary">
-      <section className="relative overflow-hidden pt-28 ">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[8%] top-[12%] h-60 w-60 rounded-full bg-accent-soft/30 blur-3xl" />
-          <div className="absolute right-[10%] top-[10%] h-64 w-64 rounded-full bg-accent-soft/30 blur-3xl" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(3,150,106,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(3,150,106,0.03)_1px,transparent_1px)] bg-[size:110px_110px] opacity-30" />
-        </div>
+    <main className="min-h-screen overflow-x-clip bg-background text-secondary">
+      <section className="relative pt-28 ">
+        <PageBackground />
 
         <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 md:px-10 md:pb-20 lg:px-16 lg:pb-24">
           <motion.div

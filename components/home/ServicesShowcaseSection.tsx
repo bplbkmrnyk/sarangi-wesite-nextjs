@@ -1,6 +1,6 @@
 "use client";
 
-import CountUp from "react-countup";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import { useRef, useState } from "react";
 import {
   AnimatePresence,
@@ -129,6 +129,7 @@ export default function ServicesShowcaseSection() {
   return (
     <section
       ref={sectionRef}
+      style={{ position: "relative" }}
       className="relative overflow-hidden bg-accent-soft py-16 sm:py-20 lg:py-28"
     >
       <div className="pointer-events-none absolute inset-0">
@@ -221,14 +222,7 @@ export default function ServicesShowcaseSection() {
                 ].map((item) => (
                   <div key={item.label}>
                     <div className="text-3xl font-black tracking-[-0.04em] text-secondary">
-                      <CountUp
-                        start={0}
-                        end={item.value}
-                        duration={2}
-                        separator=","
-                        enableScrollSpy
-                        scrollSpyOnce
-                      />
+                      <AnimatedCounter value={item.value} duration={2} />
                       {item.suffix}
                     </div>
                     <div className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-secondary-light">

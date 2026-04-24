@@ -8,6 +8,7 @@ import {
   type Variants,
 } from "framer-motion";
 import type { BlogPost } from "@/types/blog";
+import PageBackground from "@/components/ui/PageBackground";
 
 type BlogPageClientProps = {
   blogs: BlogPost[];
@@ -51,14 +52,8 @@ export default function BlogPageClient({
 
   return (
     <main className="min-h-screen overflow-x-clip text-secondary bg-background">
-      <section className="relative overflow-hidden pt-8">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[6%] top-[10%] h-56 w-56 rounded-full bg-accent-soft/40 blur-3xl" />
-          <div className="absolute right-[8%] top-[16%] h-64 w-64 rounded-full bg-accent-soft/40 blur-3xl" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(3,150,106,0.04)_1px,transparent_1px)] bg-[size:120px_120px] opacity-30" />
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d9e8e0] to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#d9e8e0] to-transparent" />
-        </div>
+      <section className="relative pt-8">
+        <PageBackground />
 
         <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 md:px-10 md:pb-20 lg:px-16 lg:pb-24">
           <motion.div

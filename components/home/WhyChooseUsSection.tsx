@@ -37,6 +37,7 @@ export default function WhyChooseUsSection() {
   return (
     <section
       ref={sectionRef}
+      style={{ position: "relative" }}
       className="relative overflow-hidden bg-background py-20 sm:py-24 lg:py-28"
     >
       <div className="pointer-events-none absolute inset-0">
@@ -116,7 +117,7 @@ export default function WhyChooseUsSection() {
               </div>
 
               <Link
-                href="/contact"
+                href="/book-appointment"
                 className="inline-flex shrink-0 items-center justify-center rounded-[22px] bg-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white shadow-[0_16px_36px_rgba(3,150,106,0.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover"
               >
                 Schedule Visit
